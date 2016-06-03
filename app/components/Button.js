@@ -7,52 +7,36 @@ import {
   TouchableHighlight
 } from 'react-native';
 
-import Header from './components/Header';
-
-class First extends Component {
+class Button extends Component {
   constructor(props){
     super(props);
     this.state = {
-      streetName: 'Elm',
-      streetNumber: 123,
-      geoLocate: {
-        lat: 12345.56778,
-        long: 9877.72346
-      }
-    }
-  }
 
+    }
+  }//constructor
 
   buttonPress(){
     this.props.navigator.push({
-      id: 'Second'
+      id: this.props.componentType
     })
-  }
+  }//close buttonPress
 
   render(){
-
-    console.log("title: ", this.props.title);
-    console.log("State: ", this.state);
-
+    console.log("Navigator from Buttons: ", this.props.navigator);
     return (
       <View style={styles.container}>
-        <Header
-          title={this.props.title}
-          />
+
         <TouchableHighlight
-          style={styles.button}
           onPress={this.buttonPress.bind(this)}
         >
-          <Text style={styles.buttonText}>Press Here</Text>
+          <Text style={styles.text}>{this.props.componentType}</Text>
+
         </TouchableHighlight>
-        <Text style={styles.text}>This is the Street Name</Text>
-        <Text style={styles.text}>{this.state.streetName}</Text>
-        <Text style={styles.text}>{this.state.geoLocate.lat}</Text>
 
       </View>
     )
-  }
-}
+  }//render
+}//close class 'Button'
 
 const styles = StyleSheet.create({
   container: {
@@ -62,7 +46,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'black',
-    fontSize: 52
+    fontSize: 26
   },
   button: {
     flex: 1,
@@ -75,4 +59,4 @@ const styles = StyleSheet.create({
   }
 });
 
-module.exports = First;
+module.exports = Button;

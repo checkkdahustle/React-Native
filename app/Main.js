@@ -30,8 +30,10 @@ class Main extends Component {
         <Header
           title={this.props.title}
           />
-          <Button navigator={this.props.navigator} componentType="ScrollViewDesc" />
-          <Button navigator={this.props.navigator} componentType="SwitchDesc" />
+          <Button navigator={this.props.navigator} componentType="Second" />
+          <Button navigator={this.props.navigator} componentType="Third" />
+          <Button navigator={this.props.navigator} componentType="Fourth" />
+          <Button navigator={this.props.navigator} componentType="Fifth" />
       </View>
     )//return
   }// render

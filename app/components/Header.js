@@ -17,8 +17,6 @@ class Header extends Component {
   }//render
 }//close class 'Header'
 
-
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -32,5 +30,4 @@ const styles = StyleSheet.create({
     fontSize: 52
   }
 });// styles
-
 module.exports = Header;

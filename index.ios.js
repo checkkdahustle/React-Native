@@ -9,14 +9,11 @@ import {
 } from 'react-native';
 
 
-// import SliderExample from './app/component/Slider';
-// import ImageExample from './app/component/image';
-
-
 import Main from './app/Main';
-import First from './app/First';
-import Second from './app/Second';
-import ScrollViewDesc from './app/ScrollViewDesc';
+import Second from './app/page2';
+import Third from './app/page3';
+import Fourth from './app/page4';
+import Fifth from './app/page5';
 
 
 class AwesomeProject extends Component {
@@ -26,12 +23,14 @@ class AwesomeProject extends Component {
     switch (route.id) {
       case 'Main':
         return(<Main navigator={navigator} title='Main' />);
-      case 'First':
-        return(<First navigator={navigator} title='First' />);
       case 'Second':
-        return(<Second navigator={navigator} title='Second'/>);
-      case 'ScrollViewDesc':
-        return(<ScrollViewDesc navigator={navigator} title='Scroll View' />);
+        return(<Second navigator={navigator} title='Second' />);
+      case 'Third':
+        return(<Third navigator={navigator} title='Third'/>);
+      case 'Fourth':
+        return(<Fourth navigator={navigator} title='Fourth'/>);
+      case 'Fifth':
+        return(<Fifth navigator={navigator} title='Fifth' />);
     }//switch
 
   }//class 'nav render Scene'
