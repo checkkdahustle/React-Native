@@ -1,6 +1,8 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
+ * Clay C. Cyprien
+ * @checkkdahustle
+ * Sample React-Native App
+ * https://github.com/checkkdahustle/React-Native
  */
 
 import React, { Component } from 'react';
