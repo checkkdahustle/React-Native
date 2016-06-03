@@ -51,11 +51,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#050',
-		// height: 30,
+		// height: 38,
   },
   buttonText: {
     color: '#fff'
-  }
+  },
+	buttonHeight: {
+		height: 38,
+	}
 });
 
 module.exports = Second;
