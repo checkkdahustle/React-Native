@@ -4,7 +4,8 @@ import {
   Text,
   View,
   StyleSheet,
-  TouchableHighlight
+  TouchableHighlight,
+  StatusBar
 } from 'react-native';
 
 import Header from './components/Header';
@@ -30,7 +31,7 @@ class Fifth extends Component {
           >
             <Text style={styles.buttonText}>Back to Main</Text>
           </TouchableHighlight>
-        <Text style={styles.text}>This is the fifth components</Text>
+        <Text style={styles.text}>This fifth component is TouchableHighlight </Text>
 
       </View>
     )
