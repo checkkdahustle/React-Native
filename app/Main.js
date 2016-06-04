@@ -3,8 +3,7 @@ import React, { Component } from 'react';
 import {
   Text,
   View,
-  StyleSheet,
-  TouchableHighlight,
+  StyleSheet
 } from 'react-native';
 
 import Header from './components/Header';
@@ -39,7 +38,7 @@ class Main extends Component {
       <Header
       title={this.props.title}
       />
-      
+
       <Button navigator={this.props.navigator} componentType="Second" />
       <Button navigator={this.props.navigator} componentType="Third" />
       <Button navigator={this.props.navigator} componentType="Fourth" />
