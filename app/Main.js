@@ -4,19 +4,28 @@ import {
   Text,
   View,
   StyleSheet,
-  TouchableHighlight
+  TouchableHighlight,
+  // TouchableOpacity
 } from 'react-native';
 
 import Header from './components/Header';
 import Button from './components/Button';
 
 class Main extends Component {
+
   constructor(props){
     super(props);
     this.state = {
+      refreshing: false,
       }
   }//close constructor
 
+  _onRefresh() {
+    this.setState({refreshing: true});
+    fetchData().then(() => {
+      this.setState({refreshing: false});
+    });
+  }
 
   buttonPress(){
     this.props.navigator.push({
@@ -27,14 +36,34 @@ class Main extends Component {
   render(){
     return (
       <View style={styles.container}>
-        <Header
-          title={this.props.title}
-          />
-          <Button navigator={this.props.navigator} componentType="Second" />
-          <Button navigator={this.props.navigator} componentType="Third" />
-          <Button navigator={this.props.navigator} componentType="Fourth" />
-          <Button navigator={this.props.navigator} componentType="Fifth" />
+        <View>
+          <Header
+            title={this.props.title}
+            />
+
+
+
+
+            <Button navigator={this.props.navigator} componentType="Second" />
+            <Button navigator={this.props.navigator} componentType="Third" />
+            <Button navigator={this.props.navigator} componentType="Fourth" />
+            <Button navigator={this.props.navigator} componentType="Fifth" />
+        </View>
       </View>
+
+
+    // <ListView
+    //           refreshControl={
+    //             <RefreshControl
+    //             refreshing={this.state.refreshing}
+    //             onRefresh={this._onRefresh.bind(this)}
+    //             />
+    //           }>
+    //
+    //   </ListView>
+
+
+
     )//return
   }// render
 }//close class 'Main'
