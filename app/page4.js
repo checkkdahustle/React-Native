@@ -32,8 +32,13 @@ class Fourth extends Component {
             onPress={this.buttonBack.bind(this)}
           >
           </TextInput>
+          <TouchableHighlight
+            style={styles.button}
+            onPress={this.buttonBack.bind(this)}
+          >
+            <Text style={styles.buttonText}>Back to Main</Text>
+          </TouchableHighlight>
 
-          <Text style={styles.buttonText}>Back to Main</Text>
         <Text style={styles.text}>This fourth component is a TextInput</Text>
 
       </View>
