@@ -1,32 +1,29 @@
 import React, { Component } from 'react';
 import {
-	Image,
-  Slider,
+
+  // Slider,
   StyleSheet,
   Text,
+	Image,
   View
 } from 'react-native';
 
 
 
-class ImageExample extends Component {
+class ImageEx extends Component {
 
 	render() {
     return (
 			<View>
-	      // <Image
-	      //   style={styles.icon}
-	      //   source={require('./myIcon.png')}
-	      // />
-	      <Image
-	        style={styles.logo}
-	        source={uri: 'http://placehold.it/350x150'}
-	      />
+			<Image
+				style={styles.button}
+				source={require('./img/icon.png')}
+				/>
 	    </View>
-    );
-  }
+    );//return
+  }//close render
+}//close class 'Image'
 
-}
 
 const styles = StyleSheet.create({
 	logo: {

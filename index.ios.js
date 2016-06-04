@@ -21,6 +21,7 @@ import Fourth from './app/page4';
 import Fifth from './app/page5';
 
 
+
 class AwesomeProject extends Component {
 
   navigatorRenderScene(route, navigator){
@@ -52,10 +53,9 @@ class AwesomeProject extends Component {
         }
       />
     );//return
-  } //close render
+  }//close render
 
-} // close class 'AwesomeProject'
-
+}// close class 'AwesomeProject'
 
 
 const styles = StyleSheet.create({
