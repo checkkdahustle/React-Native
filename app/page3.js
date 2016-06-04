@@ -29,12 +29,16 @@ class Third extends Component {
             style={styles.button}
             onPress={this.buttonBack.bind(this)}
           >
-          <View style={{width: 150, height: 100, backgroundColor: 'red'}}>
-            <Text style={styles.buttonText}>Back to Main</Text>
-          </View>
           </TouchableNativeFeedback>
 
-        <Text style={styles.text}>This is the third components</Text>
+          <TouchableHighlight
+            style={styles.button}
+            onPress={this.buttonBack.bind(this)}
+          >
+            <Text style={styles.buttonText}>Back to Main</Text>
+          </TouchableHighlight>
+
+        <Text style={styles.text}>This third component is a TouchableNativeFeedback</Text>
 
       </View>
     )//return
