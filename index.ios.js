@@ -39,7 +39,7 @@ class AwesomeProject extends Component {
         return(<Fifth navigator={navigator} title='Fifth' />);
     }//switch
 
-  }//class 'nav render Scene'
+  }//close class 'navigatorRenderScene'
 
   render() {
     return (
