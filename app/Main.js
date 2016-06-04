@@ -5,7 +5,6 @@ import {
   View,
   StyleSheet,
   TouchableHighlight,
-  // TouchableOpacity
 } from 'react-native';
 
 import Header from './components/Header';
@@ -17,7 +16,7 @@ class Main extends Component {
     super(props);
     this.state = {
       refreshing: false,
-      }
+    }
   }//close constructor
 
   _onRefresh() {
@@ -36,33 +35,17 @@ class Main extends Component {
   render(){
     return (
       <View style={styles.container}>
-        <View>
-          <Header
-            title={this.props.title}
-            />
-
-
-
-
-            <Button navigator={this.props.navigator} componentType="Second" />
-            <Button navigator={this.props.navigator} componentType="Third" />
-            <Button navigator={this.props.navigator} componentType="Fourth" />
-            <Button navigator={this.props.navigator} componentType="Fifth" />
-        </View>
+      <View>
+      <Header
+      title={this.props.title}
+      />
+      
+      <Button navigator={this.props.navigator} componentType="Second" />
+      <Button navigator={this.props.navigator} componentType="Third" />
+      <Button navigator={this.props.navigator} componentType="Fourth" />
+      <Button navigator={this.props.navigator} componentType="Fifth" />
       </View>
-
-
-    // <ListView
-    //           refreshControl={
-    //             <RefreshControl
-    //             refreshing={this.state.refreshing}
-    //             onRefresh={this._onRefresh.bind(this)}
-    //             />
-    //           }>
-    //
-    //   </ListView>
-
-
+      </View>
 
     )//return
   }// render
