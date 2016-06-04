@@ -4,7 +4,8 @@ import {
   Text,
   View,
   StyleSheet,
-  TouchableHighlight
+  TouchableHighlight,
+  TouchableNativeFeedback
 } from 'react-native';
 
 import Header from './components/Header';
@@ -13,7 +14,7 @@ class Third extends Component {
 
   buttonBack(){
     this.props.navigator.pop();
-  }
+  }//close buttonBack
 
   render(){
 
@@ -24,18 +25,21 @@ class Third extends Component {
         <Header
           title={this.props.title}
           />
-          <TouchableHighlight
+          <TouchableNativeFeedback
             style={styles.button}
             onPress={this.buttonBack.bind(this)}
           >
+          <View style={{width: 150, height: 100, backgroundColor: 'red'}}>
             <Text style={styles.buttonText}>Back to Main</Text>
-          </TouchableHighlight>
+          </View>
+          </TouchableNativeFeedback>
+
         <Text style={styles.text}>This is the third components</Text>
 
       </View>
-    )
-  }
-}
+    )//return
+  }//close render
+}//close component class 'Third'
 
 const styles = StyleSheet.create({
   container: {
