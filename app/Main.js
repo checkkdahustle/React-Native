@@ -13,16 +13,8 @@ class Main extends Component {
   constructor(props){
     super(props);
     this.state = {
-      refreshing: false,
     }
   }//close constructor
-
-  _onRefresh() {
-    this.setState({refreshing: true});
-    fetchData().then(() => {
-      this.setState({refreshing: false});
-    });
-  }
 
   buttonPress(){
     this.props.navigator.push({
