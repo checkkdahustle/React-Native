@@ -25,16 +25,16 @@ class Main extends Component {
   render(){
     return (
       <View style={styles.container}>
-      <View>
-      <Header
-      title={this.props.title}
-      />
+        <View>
+          <Header
+          title={this.props.title} />
 
-      <Button navigator={this.props.navigator} componentType="Second" />
-      <Button navigator={this.props.navigator} componentType="Third" />
-      <Button navigator={this.props.navigator} componentType="Fourth" />
-      <Button navigator={this.props.navigator} componentType="Fifth" />
-      </View>
+          <Button navigator={this.props.navigator} componentType="Second" />
+          <Button navigator={this.props.navigator} componentType="Third" />
+          <Button navigator={this.props.navigator} componentType="Fourth" />
+          <Button navigator={this.props.navigator} componentType="Fifth" />
+          <Button navigator={this.props.navigator} componentType="Sixth" />
+        </View>
       </View>
 
     )//return
