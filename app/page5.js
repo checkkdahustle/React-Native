@@ -25,18 +25,28 @@ class Fifth extends Component {
         <Header
           title={this.props.title}
           />
-          <TouchableHighlight
-            style={styles.button}
-            onPress={this.buttonBack.bind(this)}
-          >
-            <Text style={styles.buttonText}>Back to Main</Text>
-          </TouchableHighlight>
-        <Text style={styles.text}>This fifth component is TouchableHighlight </Text>
 
+          <Text style={styles.textMargin}>
+            Touch the Blue button before releasing
+          </Text>
+
+          <TouchableHighlight
+            onPress={this.buttonBack.bind(this)} >
+
+            <View style= {styles.button} >
+              <Text style={styles.buttonText}>
+                Back to Main
+              </Text>
+            </View>
+          </TouchableHighlight>
+
+        <Text style={styles.text}>
+          This fifth component is TouchableHighlight
+        </Text>
       </View>
-    )
-  }
-}
+    )//return
+  }//close render
+}//close component class 'Fifth'
 
 const styles = StyleSheet.create({
   container: {
@@ -48,13 +58,19 @@ const styles = StyleSheet.create({
     color: 'red',
   },
   button: {
-    flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#050',
+    backgroundColor: '#07d',
+    width: 340,
+		height: 100,
+    borderRadius: 10,
   },
   buttonText: {
-    color: '#fff'
+    color: '#fff',
+    textAlign: 'center',
+    fontSize: 35,
+  },
+  textMargin: {
+    marginBottom: 75,
   }
 });
 
