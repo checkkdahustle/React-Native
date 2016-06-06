@@ -19,6 +19,7 @@ import Second from './app/page2';
 import Third from './app/page3';
 import Fourth from './app/page4';
 import Fifth from './app/page5';
+import Sixth from './app/page6';
 
 
 
@@ -37,6 +38,8 @@ class AwesomeProject extends Component {
         return(<Fourth navigator={navigator} title='Fourth'/>);
       case 'Fifth':
         return(<Fifth navigator={navigator} title='Fifth' />);
+      case 'Sixth':
+        return(<Sixth navigator={navigator} title='Sixth' />);
     }//switch
 
   }//close class 'navigatorRenderScene'
