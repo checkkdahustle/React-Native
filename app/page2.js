@@ -5,12 +5,10 @@ import {
   Text,
   View,
   StyleSheet,
-  // TouchableHighlight,
   TouchableOpacity
 } from 'react-native';
 
 import Header from './components/Header';
-// import ImageEx from './components/image';
 
 class Second extends Component {
 
@@ -25,25 +23,25 @@ class Second extends Component {
     return (
       <View style={styles.container}>
         <Header
-          title={this.props.title} />
+          title={this.props.title}
+        />
+        <Text style={styles.textMargin}>
+          Touch and hold the Blue button before releasing
+        </Text>
+        <TouchableOpacity
+          onPress={this.buttonBack.bind(this)}
+        >
+          <View style= {styles.button} >
+            <Text style={styles.buttonText}>
+              Back to Main
+            </Text>
+          </View>
+        </TouchableOpacity>
 
-          <TouchableOpacity
-            style={styles.button}
-            onPress={this.buttonBack.bind(this)} >
-
-            <Text style={styles.buttonText}>Back to Main</Text>
-          </TouchableOpacity>
-        <Text style={styles.text}>This second components has TouchableOpacity </Text>
-        </View>
-  // <TouchableHighlight
-  //         onPress={this._onPressButton}>
-  //
-  //             <Text>Something</Text>
-  //         </TouchableHighlight>
-
-
-// Trying to add pic icon
-
+        <Text style={styles.text}>
+          This second components has TouchableOpacity
+        </Text>
+      </View>
     )//return
   }//close render
 }//close component class 'Second'
@@ -58,18 +56,20 @@ const styles = StyleSheet.create({
     color: 'red',
   },
   button: {
-    flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#050',
-		// height: 38,
+    backgroundColor: '#07d',
+    width: 340,
+		height: 100,
+    borderRadius: 10,
   },
   buttonText: {
-    color: '#fff'
+    color: '#fff',
+    textAlign: 'center',
+    fontSize: 35,
   },
-	buttonHeight: {
-		height: 38,
-	}
+  textMargin: {
+    marginBottom: 75,
+  }
 });
 
 module.exports = Second;
