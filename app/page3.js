@@ -5,12 +5,20 @@ import {
   View,
   StyleSheet,
   TouchableHighlight,
-  TouchableNativeFeedback
+  Switch
 } from 'react-native';
 
 import Header from './components/Header';
 
 class Third extends Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      trueSwitchIsOn: true,
+      falseSwitchIsOn: false
+    }
+  }//close constructor
 
   buttonBack(){
     this.props.navigator.pop();
@@ -25,21 +33,32 @@ class Third extends Component {
         <Header
           title={this.props.title}
           />
-          <TouchableNativeFeedback
-            style={styles.button}
-            onPress={this.buttonBack.bind(this)}
-          >
-          </TouchableNativeFeedback>
+
+          <Switch
+            style={styles.switchMargin} value={this.state.falseSwitchIsOn}
+            onValueChange={(value) => this.setState({falseSwitchIsOn: value})}
+          />
+
+          <Switch
+            style={styles.switchMargin} value={this.state.trueSwitchIsOn}
+            onValueChange={(value) =>
+            this.setState({trueSwitchIsOn: value})}
+          />
 
           <TouchableHighlight
-            style={styles.button}
             onPress={this.buttonBack.bind(this)}
           >
-            <Text style={styles.buttonText}>Back to Main</Text>
+            <View style= {styles.button} >
+              <Text style={styles.buttonText}>
+                Back to Main
+              </Text>
+            </View>
           </TouchableHighlight>
 
-        <Text style={styles.text}>This third component is a TouchableNativeFeedback</Text>
 
+        <Text style={styles.text}>
+          This third component is a Switch
+        </Text>
       </View>
     )//return
   }//close render
@@ -55,13 +74,19 @@ const styles = StyleSheet.create({
     color: 'red',
   },
   button: {
-    flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#050',
+    backgroundColor: '#07d',
+    width: 340,
+		height: 100,
+    borderRadius: 10,
   },
   buttonText: {
-    color: '#fff'
+    color: '#fff',
+    textAlign: 'center',
+    fontSize: 35,
+  },
+  switchMargin: {
+    marginBottom: 75,
   }
 });
 
