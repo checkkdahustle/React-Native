@@ -68,7 +68,7 @@ export default class App extends Component {
   }
 
   render() {
-    console.log("TeamsInfo: ", this.state.teamsInfo);
+    // console.log("TeamsInfo: ", this.state.teamsInfo);
     return <Provider style={styles.container} store={store}>
             <RouterWithRedux  navigationBarStyle={styles.navBar} titleStyle={styles.navBarTitle}>
 
@@ -81,7 +81,6 @@ export default class App extends Component {
 										title="Team"
 										icon={TabIcon}
                     teamkey={null}
-										initial={true}
                     />
 
                     <Scene key="second"
@@ -92,6 +91,7 @@ export default class App extends Component {
                     <Scene key="news"
 											component={News_view}
 											title="News"
+                      initial={true}
 											icon={TabIcon} />
                   </Scene>
 

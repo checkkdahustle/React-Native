@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { AsyncStorage, ScrollView, ListView, Text, View, StyleSheet, Image, TouchableHighlight, Alert } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import { connect } from 'react-redux';
+import News_view from '../containers/News_view';
 
 
-
-export default class CustomListView extends Component {
+export default class NewsList extends Component {
   constructor(props){
     super(props);
       const ds = new ListView.DataSource({
@@ -22,14 +22,15 @@ export default class CustomListView extends Component {
     this.setState({dataSource});
   }
 
-  componentWillMount(){
-    console.log(this.props.ListData);
-    // let data = this.props.data;
-    // this.setState({
-    //   dataSource: this.ds.cloneWithRowsAndSections(data)
-    // });
-  }
 
+  componentWillMount(){
+    // console.log("whats This: ",this.props.ListData);
+    let data = this.props.ListData;
+    this.setState({
+      dataSource: this.ds.cloneWithRowsAndSections(data)
+    });
+  }
+/*
   renderRow(teamList){
     return(
       <View>
@@ -39,6 +40,7 @@ export default class CustomListView extends Component {
       </View>
     )
   }
+
   renderSectionHeader(sectionData, conference) {
     return(
       <View>
@@ -46,8 +48,9 @@ export default class CustomListView extends Component {
       </View>
     )
   }
+*/
   render(){
-    console.log("TeamList: ", this.props);
+    // console.log("TopNewsfrom_CustomView: ", this.props);
     return (
       <View style={styles.container}>
         <ListView
@@ -58,7 +61,7 @@ export default class CustomListView extends Component {
       </View>
     )
   }//render
-}//close class 'TeamList'
+}//close class 'NewsList'
 
 const styles = StyleSheet.create({
   container: {

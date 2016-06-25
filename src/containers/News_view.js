@@ -11,7 +11,7 @@ import {
 
 import api from '../utilities/api';
 import Live from '../components/Live';
-import CustomListView from '../components/CustomListView';
+import NewsList from '../components/NewsList';
 
 
 
@@ -33,10 +33,10 @@ export default class News_view extends Component {
 
     api.getAllNews().then((res) => {
       this.setState({
-        TopNews: res,
+        TopNews: res
       });
       }).then((res) => {
-        let news = this.state.TopNews
+        let news = this.state.TopNews;
         this.setState({
           dataSource: this.ds.cloneWithRowsAndSections(news)
         });
@@ -45,7 +45,6 @@ export default class News_view extends Component {
   };
 
   render(){
-    // console.log("results: ", this.state.results);
     console.log('TopNews', this.state.TopNews);
     if(this.state.TopNews.length == 0){
       return(
@@ -65,8 +64,10 @@ export default class News_view extends Component {
     } else {
       return (
           <View style={styles.container}>
-            <CustomListView
+            <NewsList
               ListData={this.state.TopNews}
+
+
             />
           </View>
       )
