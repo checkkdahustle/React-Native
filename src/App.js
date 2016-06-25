@@ -2,7 +2,7 @@
           - Clay C. Cyprien
           - @checkkdahustle
           - PLAYBOOK - The Sports React-Native App
-          - https://github.com/checkkdahustle/ThePlayBookApp
+          - https://github.com/checkkdahustle/React-Native/tree/ThePlayBookApp
  */
 
 /* React, React-Native, Router-Flux, Redux */
