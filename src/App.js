@@ -100,10 +100,6 @@ export default class App extends Component {
                       title="Follow a Team"
                       icon={TabIcon} />
 
-
-
-
-
               </Scene>
             </RouterWithRedux>
           </Provider>
