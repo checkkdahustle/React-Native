@@ -11,7 +11,7 @@ import {
 
 import api from '../utilities/api';
 import Live from '../components/Live';
-import NewsList from '../components/NewsList';
+import NewsList from '../components/NewsList'
 
 
 
@@ -56,7 +56,7 @@ export default class News_view extends Component {
 
           <View style={styles.container}>
             <Text style={[styles.NotFollowTeamMsg, styles.centerTeamMsg]}>
-              Your not connected to the internet
+              Your not connected to the api.
             </Text>
           </View>
         </View>
