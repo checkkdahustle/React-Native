@@ -13,7 +13,7 @@ export default class NewsList extends Component {
         sectionHeaderHasChanged: (s1, s2) => s1 !== s2
        });
       this.state = {
-        dataSource: ds.cloneWithRowsAndSections(props.ListData)
+        dataSource: this.ds.cloneWithRowsAndSections(props.ListData)
       }
   }
 
@@ -55,8 +55,6 @@ export default class NewsList extends Component {
       <View style={styles.container}>
         <ListView
           dataSource={this.state.dataSource}
-          renderRow={this.renderRow}
-          renderSectionHeader={this.renderSectionHeader}
          />
       </View>
     )
